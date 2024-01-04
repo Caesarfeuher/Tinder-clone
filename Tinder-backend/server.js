@@ -1,21 +1,18 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import Cards from './dbCards.js';
-import Cors from "Cors";
+import Cors from "cors";
 
 // App Config
 const app = express();
 const port = process.env.PORT || 8001
-// const connection_url ="mongodb+srv://admin:6mrmnw1@cluster0.4lrnua9.mongodb.net/tinderdb?retryWrites=true&w=majority";
-
-const connection_url ="mongodb+srv://hydra:6mrmnw1@tinder.nq1vkof.mongodb.net/tinderDB"
-
 
 // Middlewares
 app.use(express.json());
 app. use(Cors());
 
 // DB config
+const connection_url ="mongodb+srv://hydra:6mrmnw1@tinder.nq1vkof.mongodb.net/tinderDB"
 mongoose.set('strictQuery', false);
 mongoose.connect(connection_url, { useNewUrlParser: true }, (err) => {
     if (err) {
