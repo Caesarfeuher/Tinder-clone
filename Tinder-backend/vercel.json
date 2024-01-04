@@ -1,6 +1,6 @@
 {
     "version":1,
-    "name":"whatsapp-mern-backend-dep",
+    "name":"tinder-mern-backend-dep",
     "builds":[
         {
             "src":"server.js",
